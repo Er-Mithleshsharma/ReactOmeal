@@ -15,9 +15,7 @@ const ShimmerMenu = () => {
           <div className="bottom shimmer-menu stroke animate">
             <h4 className="avg-rating shimmer-menu stroke animate">
               <span
-                className="icons shimmer-menu stroke animate"
-                stroke
-                animate
+                className="icons shimmer-menu stroke"
                 style={{
                   position: 'relative',
                   top: '2px',
@@ -28,7 +26,7 @@ const ShimmerMenu = () => {
             </h4>
             <h4 className="time shimmer-menu stroke animate">
               <span
-                className="icons stroke animate"
+                className="icons stroke"
                 style={{
                   position: 'relative',
                   top: '2px',
