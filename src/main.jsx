@@ -7,6 +7,7 @@ import Contact from './components/contact.jsx'
 import About from './components/About.jsx'
 import Body from './components/Body.jsx'
 import RestaurantMenu from './components/RestaurantMenu.jsx'
+import Error from './components/Error.jsx'
 
 const appRouter = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const appRouter = createBrowserRouter([
  
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+   <React.StrictMode>
     < RouterProvider router={appRouter}/>
-  </React.StrictMode>,
+   </React.StrictMode>, 
 )
