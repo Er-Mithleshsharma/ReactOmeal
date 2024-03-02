@@ -20,16 +20,19 @@ const RestaurantCard = (props) => {
             }}
         >
             <img
-                className=" h-44 w-56 rounded-sm"
+                className=" h-44 w-52 rounded-sm"
                 src={CDN_URL + cloudinaryImageId}
                 alt="Biryani"
             />
 
-            <h3>{name}</h3>
-            <h4>{cuisines.join(', ')}</h4>
-            <h4>{avgRating} stars</h4>
-            <h4>{costForTwo.toUpperCase()}</h4>
-            <h4>{sla.slaString}</h4>
+            <h3 className='text-xl font-bold'>{name}</h3>
+            <h4 className=' font-semibold'>{
+                cuisines[3]?
+            cuisines[0]+", "+cuisines[1]+", "+cuisines[3]:cuisines[0]
+            }</h4>
+            <h4 className=' font-semibold'>{avgRating} stars</h4>
+            <h4 className=' font-semibold'>{costForTwo.toUpperCase()}</h4>
+            <h4 className=' font-semibold'>{sla.slaString}</h4>
         </div>
     );
 };
