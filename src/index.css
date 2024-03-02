@@ -11,6 +11,10 @@
   align-items: center;
   gap: 30px;
 }
+.x img{
+  background-size: cover;
+  background-position: center;
+}
 
 .menu-header .menu-header-left img {
   width: 250px;
@@ -164,4 +168,10 @@
   to {
     background-position: 1000px 0;
   }
+}
+.animate-fast{
+  animation: shimmer 2s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(to right, #f0eeee 5%, #d1cfcf 25%, #e8e6e6 35%);
+  background-size: 1000px 100%;
 }

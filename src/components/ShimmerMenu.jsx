@@ -60,6 +60,91 @@ const ShimmerMenu = () => {
         <li>{itemCards[2].card.info.name}</li> */}
         </div>
       </div>
+     
+      <div className="menu-main shimmer-menu-main shimmer-menu stroke animate">
+        <h2></h2>
+        <h3 className="items shimmer-menu stroke animate"></h3>
+        <div className="menu-main-card-container shimmer-menu stroke animate">
+          <div className="menu-card shimmer-menu stroke animate">
+            <div className="menu-card-left shimmer-menu stroke animate">
+              <h2 className="menu-name shimmer-menu stroke animate"></h2>
+              <h3 className="menu-price shimmer-menu stroke animate"></h3>
+              <h4 className="menu-description shimmer-menu stroke animate"></h4>
+            </div>
+            <div className="menu-card-right shimmer-menu stroke animate">
+              <img src="" alt="" className="stroke animate" />
+            </div>
+          </div>
+
+          {/* <li>{itemCards[0].card.info.name}</li>
+        <li>{itemCards[1].card.info.name}</li>
+        <li>{itemCards[2].card.info.name}</li> */}
+        </div>
+      </div>
+
+      <div className="menu-main shimmer-menu-main shimmer-menu stroke animate">
+        <h2></h2>
+        <h3 className="items shimmer-menu stroke animate"></h3>
+        <div className="menu-main-card-container shimmer-menu stroke animate">
+          <div className="menu-card shimmer-menu stroke animate">
+            <div className="menu-card-left shimmer-menu stroke animate">
+              <h2 className="menu-name shimmer-menu stroke animate"></h2>
+              <h3 className="menu-price shimmer-menu stroke animate"></h3>
+              <h4 className="menu-description shimmer-menu stroke animate"></h4>
+            </div>
+            <div className="menu-card-right shimmer-menu stroke animate">
+              <img src="" alt="" className="stroke animate" />
+            </div>
+          </div>
+
+          {/* <li>{itemCards[0].card.info.name}</li>
+        <li>{itemCards[1].card.info.name}</li>
+        <li>{itemCards[2].card.info.name}</li> */}
+        </div>
+      </div>
+
+      <div className="menu-main shimmer-menu-main shimmer-menu stroke animate">
+        <h2></h2>
+        <h3 className="items shimmer-menu stroke animate"></h3>
+        <div className="menu-main-card-container shimmer-menu stroke animate">
+          <div className="menu-card shimmer-menu stroke animate">
+            <div className="menu-card-left shimmer-menu stroke animate">
+              <h2 className="menu-name shimmer-menu stroke animate"></h2>
+              <h3 className="menu-price shimmer-menu stroke animate"></h3>
+              <h4 className="menu-description shimmer-menu stroke animate"></h4>
+            </div>
+            <div className="menu-card-right shimmer-menu stroke animate">
+              <img src="" alt="" className="stroke animate" />
+            </div>
+          </div>
+
+          {/* <li>{itemCards[0].card.info.name}</li>
+        <li>{itemCards[1].card.info.name}</li>
+        <li>{itemCards[2].card.info.name}</li> */}
+        </div>
+      </div>
+
+      <div className="menu-main shimmer-menu-main shimmer-menu stroke animate">
+        <h2></h2>
+        <h3 className="items shimmer-menu stroke animate"></h3>
+        <div className="menu-main-card-container shimmer-menu stroke animate">
+          <div className="menu-card shimmer-menu stroke animate">
+            <div className="menu-card-left shimmer-menu stroke animate">
+              <h2 className="menu-name shimmer-menu stroke animate"></h2>
+              <h3 className="menu-price shimmer-menu stroke animate"></h3>
+              <h4 className="menu-description shimmer-menu stroke animate"></h4>
+            </div>
+            <div className="menu-card-right shimmer-menu stroke animate">
+              <img src="" alt="" className="stroke animate" />
+            </div>
+          </div>
+
+          {/* <li>{itemCards[0].card.info.name}</li>
+        <li>{itemCards[1].card.info.name}</li>
+        <li>{itemCards[2].card.info.name}</li> */}
+        </div>
+      </div>
+
     </div>
   );
 };
