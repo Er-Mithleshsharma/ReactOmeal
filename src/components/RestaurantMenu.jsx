@@ -6,24 +6,26 @@ import { CDN_URL } from '../utils/constants';
 import { MENU_API } from '../utils/constants';
 import { FiClock } from 'react-icons/fi';
 import { AiOutlineStar } from 'react-icons/ai';
+import useRestrauntMenu from '../utils/useRestrauntMenu';
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
+  console.log("menu")
+  // const [resInfo, setResInfo] = useState(null);
 
   const { resId } = useParams();
   // console.log(resId);
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  // useEffect(() => {
+  //   fetchMenu();
+  // }, []);
 
-  const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resId);
-    const json = await data.json();
-    console.log(json);
-    setResInfo(json.data);
-  };
-
+  // const fetchMenu = async () => {
+  //   const data = await fetch(MENU_API + resId);
+  //   const json = await data.json();
+  //   console.log(json);
+  //   setResInfo(json.data);
+  // };
+    const resInfo = useRestrauntMenu(resId)
   if (resInfo === null) return <ShimmerMenu />;
 
   const {
@@ -42,7 +44,7 @@ const RestaurantMenu = () => {
     const itemCards2=   resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card ;
      const itemCards = (itemCards1.title == "Recommended")?itemCards1.itemCards:itemCards2.itemCards
 
-  console.log(itemCards);
+  // console.log(itemCards);
 
   return (
     <div className="menu">
