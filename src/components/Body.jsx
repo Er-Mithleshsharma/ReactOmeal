@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import RestaurantCard from './RestaurantCard';
-import resList from '../utils/mockData';
 import {Link} from 'react-router-dom'
 import Shimmer from './Shimmer';
+import useOnlineStatus from '../utils/useOnlineStatus'
 
 const Body = () => {
   // * React Hook -> A normal JavaScript function which is given to us by React (or) Normal JS utility functions
@@ -12,7 +12,7 @@ const Body = () => {
   // * State variable - Super Powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [inpval,setinpval]=useState("");
-  const [searchText, setSearchText] = useState('');
+  // const [searchText, setSearchText] = useState('');
   const [filteredrestraunts,setfilteredrestaurants] = useState([])
   useEffect(()=>{
     apicall();
@@ -45,6 +45,9 @@ const Body = () => {
     console.log(newlist)
     setfilteredrestaurants(newlist);
   }
+console.log('inbody')
+  const checkStatus= useOnlineStatus();
+  if(checkStatus === false) return <h1>rest is offline</h1>
   return listOfRestaurants.length === 0 ? <Shimmer/> :
    (
     <div className="body">
