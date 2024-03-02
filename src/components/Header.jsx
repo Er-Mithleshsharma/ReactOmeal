@@ -1,21 +1,23 @@
 import { LOGO_URL } from '../utils/constants';
 import {Link} from 'react-router-dom'
+import { IoFastFoodOutline } from "react-icons/io5";
 const Header = () => {
     return (
-        <div className="header">
-            <div className="logo-container">
-                <img src={LOGO_URL} alt="App Logo" className="logo" />
+        <div className="flex justify-between bg-[#5d0c1d] items-center ">
+            <div className="flex items-center p-2">
+            <IoFastFoodOutline size={"4em"} color='#CCB38D'/>
+            <h1 className='text-5xl text-[#CCB38D] font-bold'>ReactOmeal</h1>
+                {/* <img src={LOGO_URL} alt="App Logo" className=" w-32 h-24" /> */}
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    {/* <li><Link to="/about">Home</Link></li> */}
-                     <li><Link to="/about">About</Link></li>
-                      <li><Link to="/contact">Contact Us</Link></li>
-                   <li><Link to="/cart">Cart</Link></li>
+            <div className="text-[#CCB38D]">
+                <ul className='flex'>
+                    <li className=' pr-4 text-lg font-semibold '><Link to="/">Home</Link></li>
+                    <li className=' pr-4 text-lg font-semibold '><Link to="/about">About</Link></li>
+                    <li className=' pr-4 text-lg font-semibold '><Link to="/contact">Contact Us</Link></li>
+                    <li className=' pr-4 text-lg font-semibold '><Link to="/cart">Cart</Link></li>
                 </ul>
             </div>
-        </div>
+        </div>
     );
 };
 

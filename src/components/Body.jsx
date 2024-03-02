@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import RestaurantCard from './RestaurantCard';
 import {Link} from 'react-router-dom'
 import Shimmer from './Shimmer';
+import { RiFilter2Fill } from "react-icons/ri";
 import useOnlineStatus from '../utils/useOnlineStatus'
 
 const Body = () => {
@@ -46,18 +47,28 @@ const Body = () => {
     setfilteredrestaurants(newlist);
   }
 console.log('inbody')
-  const checkStatus= useOnlineStatus();
-  if(checkStatus === false) return <h1>rest is offline</h1>
+  // const checkStatus= useOnlineStatus();
+  // if(checkStatus === false) return <h1>rest is offline</h1>
   return listOfRestaurants.length === 0 ? <Shimmer/> :
    (
     <div className="body">
-      {/* <div className="search-container">
-        <input type="text" placeholder="Search Food or Restaurant" />
-        <button>Search</button>
-      </div> */}
-      <div className="filter">
+      <div className='w-full relative'>
+        <img className='w-full h-56 object-cover  blur-[1.8px]' src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" alt="" />
+        </div>
+      <div className='p-4 flex justify-center absolute top-20 left-[32%] text-white font-bold'>
+        <h1 className='text-4xl'>Top restaurant chains near you</h1>
+        </div>
+      
+      <div className='flex items-center flex-col absolute top-40 left-[32%]  text-white'>
+            <input  className="p-3 w-[550px] border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-2xl font-normal text-white outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" placeholder="Enter Restraunt here" type="text" value={inpval} onChange={e=> setinpval(e.target.value)}/>
+            <button className='p-2 px-8 text-xl bg-[#ccb38d] m-3 rounded-sm' onClick={(e)=>{
+              filterlogic();
+              console.log(inpval)
+            }}>Search</button>
+          </div>
+          <div className="flex justify-center">
         <button
-          className="filter-btn"
+          className="text-2xl font-bold p-2 "
           onClick={() => {
             // * Filter logic
             const filteredList = listOfRestaurants.filter((res)=> parseFloat(res.info.avgRating) > 4.2)
@@ -66,17 +77,10 @@ console.log('inbody')
             setfilteredrestaurants(filteredList);
             console.log(filteredList);
           }}
-        >
-          Top Rated Restaurants
+        >  
+          Restraunts 
         </button>
       </div>
-      <div className='search'>
-            <input  className="searchbox" type="text" value={inpval} onChange={e=> setinpval(e.target.value)}/>
-            <button onClick={(e)=>{
-              filterlogic();
-              console.log(inpval)
-            }}>search</button>
-          </div>
           {/* <div className="search">
           <input
             type="text"
@@ -103,15 +107,11 @@ console.log('inbody')
             Search
           </button>
         </div> */}
-      <div className="res-container">
+      <div className="flex flex-wrap container px-20 gap-4">
         {/* // * looping through the <RestaurentCard /> components Using Array.map() method */}
 
         {filteredrestraunts.map((restaurant) => (
            <Link
-           style={{
-             textDecoration: 'none',
-             color: '#000',
-           }}
            key={restaurant.info.id}
            to={'/restaurants/' + restaurant.info.id}
          >

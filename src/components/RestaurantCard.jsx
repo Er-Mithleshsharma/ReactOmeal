@@ -14,13 +14,13 @@ const RestaurantCard = (props) => {
 
     return (
         <div
-            className="res-card"
+            className="p-4 m-2 w-60 rounded-lg h-96"
             style={{
                 backgroundColor: '#f0f0f0',
             }}
         >
             <img
-                className="res-logo"
+                className=" h-44 w-56 rounded-sm"
                 src={CDN_URL + cloudinaryImageId}
                 alt="Biryani"
             />
