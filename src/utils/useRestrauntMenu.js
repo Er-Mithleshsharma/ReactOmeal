@@ -1,7 +1,6 @@
 import {useState,useEffect} from 'react'
 import {MENU_API} from "./constants"
 const useRestrauntMenu = (resId)=>{
-    console.log("inside")
     const [resInfo, setResInfo] = useState(null);
     useEffect(() => {
         fetchMenu();

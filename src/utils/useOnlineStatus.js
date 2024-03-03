@@ -1,10 +1,8 @@
 import { useState,useEffect } from "react"
 
 const useOnlineStatus = ()=>{
-     console.log("useonline")
      const [onlineStatus,setOnlineStatus] = useState(true)
      useEffect(() => {
-          console.log("useonline effect")
           window.addEventListener('offline', () => {
             setOnlineStatus(false);
           });
@@ -17,3 +15,13 @@ const useOnlineStatus = ()=>{
   return onlineStatus;      
 }
 export default useOnlineStatus;
+
+// working - 
+// firstly it will get mounted onto the dom 
+// so it will be actively looking for online and offline events 
+// at any point the event triggers it will chnage the state variable 
+// which will trigger the component to get rerendered 
+
+// Q- why useeffect is used 
+
+// A- we only want it to be mounted for the first time and only one time not on every subsequent rerender
