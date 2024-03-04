@@ -60,10 +60,21 @@ console.log('inbody')
   return listOfRestaurants.length === 0 ? <Shimmer/> :
    (
     <div className="body">
-      <div className='w-full relative'>
-        <img className='w-full h-56 object-cover  blur-[1.8px]' src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" alt="" />
+      <div className='w-full flex flex-col justify-center items-center  bg-[url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png")] h-56'>
+        {/* <img className='w-full h-56 object-cover  blur-[1.8px]' src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" alt="" /> */}
+        <div className='p-4 flex left-4 text-white font-bold'>
+        <h1 className='text-xl sm:text-4xl'>Top Restaurant Chains Near You</h1>
         </div>
-      <div className='p-4 flex absolute top-20 md:left-[32%] left-4 text-white font-bold'>
+      
+      <div className='flex items-center flex-col text-white px-4'>
+            <input  className=" p-3 w-full sm:w-[550px] border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-2xl font-normal text-white outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" placeholder="Enter Restraunt here" type="text" value={inpval} onChange={e=> setinpval(e.target.value)}/>
+            <button className='p-2 px-8 text-xl bg-[#ccb38d] m-3 rounded-sm' onClick={(e)=>{
+              filterlogic();
+              console.log(inpval)
+            }}>Search</button>
+          </div>
+        </div>
+      {/* <div className='p-4 flex absolute top-20 md:left-[32%] left-4 text-white font-bold'>
         <h1 className='text-xl sm:text-4xl'>Top Restaurant Chains Near You</h1>
         </div>
       
@@ -73,7 +84,7 @@ console.log('inbody')
               filterlogic();
               console.log(inpval)
             }}>Search</button>
-          </div>
+          </div> */}
           <div className="flex justify-center">
         <button
           className="text-2xl font-bold p-2 "
