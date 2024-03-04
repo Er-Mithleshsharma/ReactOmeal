@@ -35,7 +35,7 @@ const Shimmer = () => {
         
       </header>
 
-    <div className="flex flex-wrap container px-20 gap-4 ">
+    <div className="flex flex-wrap container-lg px-20 gap-4 ">
       {/* one animation */}
       <div className="  p-4 m-2 w-60 rounded-lg h-96 stroke animate">
       <div className="  stroke animate-fast h-44 w-52 rounded-sm">

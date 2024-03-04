@@ -14,7 +14,7 @@ const RestaurantCard = (props) => {
 
     return (
         <div
-            className="p-4 m-2 w-60 rounded-lg h-96"
+            className="p-4 m-2 w-60 rounded-lg h-96 mx-auto"
             style={{
                 backgroundColor: '#f0f0f0',
             }}
