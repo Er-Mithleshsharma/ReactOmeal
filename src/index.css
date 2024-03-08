@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* * Menu page */
+/* shimmer  */
 .menu-header {
   height: 30vh;
   background-color: #000;
@@ -49,25 +49,9 @@
 .menu{
   background-color:#f7f7f7;
 }
-.menu-main {
-  /* margin-top: 100px; */
-  margin: 80px 150px;
-  
-}
 
-.menu-main h2 {
-  font-size: 30px;
-  opacity: 0.8;
-}
 
-.menu-main .items {
-  font-size: 14px;
-  opacity: 0.6;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 10px;
-}
+
 
 .menu-main-card-container {
   margin-top: 50px;
@@ -82,23 +66,6 @@
   background-color: #fff;
   padding: 20px;
   border-bottom: 1px solid #3b3a3a;
-}
-
-.menu-card-left .menu-name {
-  font-size: 24px;
-  opacity: 0.8;
-}
-
-.menu-card-left .menu-price {
-  font-weight: normal;
-  opacity: 0.8;
-  margin-top: 5px;
-}
-
-.menu-card-left .menu-description {
-  font-weight: normal;
-  opacity: 0.8;
-  margin-top: 15px;
 }
 
 .menu-card-right img {

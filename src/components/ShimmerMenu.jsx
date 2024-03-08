@@ -39,112 +39,41 @@ const ShimmerMenu = () => {
           </div>
         </div>
       </header>
-
-      <div className="menu-main shimmer-menu-main shimmer-menu stroke animate">
-        <h2></h2>
-        <h3 className="items shimmer-menu stroke animate"></h3>
-        <div className="menu-main-card-container shimmer-menu stroke animate">
-          <div className="menu-card shimmer-menu stroke animate">
-            <div className="menu-card-left shimmer-menu stroke animate">
-              <h2 className="menu-name shimmer-menu stroke animate"></h2>
-              <h3 className="menu-price shimmer-menu stroke animate"></h3>
-              <h4 className="menu-description shimmer-menu stroke animate"></h4>
-            </div>
-            <div className="menu-card-right shimmer-menu stroke animate">
-              <img src="" alt="" className="stroke animate" />
-            </div>
-          </div>
-
-          {/* <li>{itemCards[0].card.info.name}</li>
-        <li>{itemCards[1].card.info.name}</li>
-        <li>{itemCards[2].card.info.name}</li> */}
-        </div>
-      </div>
      
-      <div className="menu-main shimmer-menu-main shimmer-menu stroke animate">
-        <h2></h2>
-        <h3 className="items shimmer-menu stroke animate"></h3>
-        <div className="menu-main-card-container shimmer-menu stroke animate">
-          <div className="menu-card shimmer-menu stroke animate">
-            <div className="menu-card-left shimmer-menu stroke animate">
-              <h2 className="menu-name shimmer-menu stroke animate"></h2>
-              <h3 className="menu-price shimmer-menu stroke animate"></h3>
-              <h4 className="menu-description shimmer-menu stroke animate"></h4>
-            </div>
-            <div className="menu-card-right shimmer-menu stroke animate">
-              <img src="" alt="" className="stroke animate" />
-            </div>
-          </div>
+      <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 relative overflow-hidden mt-20  animate-pulse">
+           <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer"></div>
+           content
+           </div>
+     
+           <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 relative overflow-hidden  animate-pulse">
+           <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer"></div>
+           content
+           </div>
 
-          {/* <li>{itemCards[0].card.info.name}</li>
-        <li>{itemCards[1].card.info.name}</li>
-        <li>{itemCards[2].card.info.name}</li> */}
-        </div>
-      </div>
+           <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 relative overflow-hidden   animate-pulse">
+           <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer"></div>
+           content
+           </div>
 
-      <div className="menu-main shimmer-menu-main shimmer-menu stroke animate">
-        <h2></h2>
-        <h3 className="items shimmer-menu stroke animate"></h3>
-        <div className="menu-main-card-container shimmer-menu stroke animate">
-          <div className="menu-card shimmer-menu stroke animate">
-            <div className="menu-card-left shimmer-menu stroke animate">
-              <h2 className="menu-name shimmer-menu stroke animate"></h2>
-              <h3 className="menu-price shimmer-menu stroke animate"></h3>
-              <h4 className="menu-description shimmer-menu stroke animate"></h4>
-            </div>
-            <div className="menu-card-right shimmer-menu stroke animate">
-              <img src="" alt="" className="stroke animate" />
-            </div>
-          </div>
+           <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 relative overflow-hidden   animate-pulse">
+           <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer"></div>
+           content
+           </div>
 
-          {/* <li>{itemCards[0].card.info.name}</li>
-        <li>{itemCards[1].card.info.name}</li>
-        <li>{itemCards[2].card.info.name}</li> */}
-        </div>
-      </div>
+           <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 relative overflow-hidden   animate-pulse">
+           <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer"></div>
+           content
+           </div>
 
-      <div className="menu-main shimmer-menu-main shimmer-menu stroke animate">
-        <h2></h2>
-        <h3 className="items shimmer-menu stroke animate"></h3>
-        <div className="menu-main-card-container shimmer-menu stroke animate">
-          <div className="menu-card shimmer-menu stroke animate">
-            <div className="menu-card-left shimmer-menu stroke animate">
-              <h2 className="menu-name shimmer-menu stroke animate"></h2>
-              <h3 className="menu-price shimmer-menu stroke animate"></h3>
-              <h4 className="menu-description shimmer-menu stroke animate"></h4>
-            </div>
-            <div className="menu-card-right shimmer-menu stroke animate">
-              <img src="" alt="" className="stroke animate" />
-            </div>
-          </div>
+           <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 relative overflow-hidden   animate-pulse">
+           <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer"></div>
+           content
+           </div>
 
-          {/* <li>{itemCards[0].card.info.name}</li>
-        <li>{itemCards[1].card.info.name}</li>
-        <li>{itemCards[2].card.info.name}</li> */}
-        </div>
-      </div>
-
-      <div className="menu-main shimmer-menu-main shimmer-menu stroke animate">
-        <h2></h2>
-        <h3 className="items shimmer-menu stroke animate"></h3>
-        <div className="menu-main-card-container shimmer-menu stroke animate">
-          <div className="menu-card shimmer-menu stroke animate">
-            <div className="menu-card-left shimmer-menu stroke animate">
-              <h2 className="menu-name shimmer-menu stroke animate"></h2>
-              <h3 className="menu-price shimmer-menu stroke animate"></h3>
-              <h4 className="menu-description shimmer-menu stroke animate"></h4>
-            </div>
-            <div className="menu-card-right shimmer-menu stroke animate">
-              <img src="" alt="" className="stroke animate" />
-            </div>
-          </div>
-
-          {/* <li>{itemCards[0].card.info.name}</li>
-        <li>{itemCards[1].card.info.name}</li>
-        <li>{itemCards[2].card.info.name}</li> */}
-        </div>
-      </div>
-
+           <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 relative overflow-hidden   animate-pulse">
+           <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer"></div>
+           content
+           </div>
     </div>
   );
 };

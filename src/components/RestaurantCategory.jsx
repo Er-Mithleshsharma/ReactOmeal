@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ItemList from './ItemList'
+import { BiSolidDownArrow } from "react-icons/bi";
 const RestrauntCategory = ({data}) => {
   const [showItems,setShowItems] = useState(false)
   function clickhandler()
@@ -15,7 +16,7 @@ const RestrauntCategory = ({data}) => {
           <span className="font-bold text-lg">
             {data.title} ({data.itemCards.length})
           </span>
-          <span onClick={clickhandler}>🔽</span>
+          <span onClick={clickhandler}><BiSolidDownArrow /></span>
         </div>
         {/* Accordion Body */}
 

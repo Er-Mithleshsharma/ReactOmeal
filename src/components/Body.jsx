@@ -50,7 +50,7 @@ const Body = () => {
   // }
   function filterlogic()
   {
-    const newlist = listOfRestaurants.filter((restaurant)=> restaurant?.info.name.includes(inpval))
+    const newlist = listOfRestaurants.filter((restaurant)=> restaurant?.info.name.toLowerCase().includes(inpval.toLowerCase()))
     console.log(newlist)
     setfilteredrestaurants(newlist);
   }
