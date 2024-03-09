@@ -5,7 +5,6 @@ import { FiClock } from 'react-icons/fi';
 import { AiOutlineStar } from 'react-icons/ai';
 import useRestrauntMenu from '../utils/useRestrauntMenu';
 import RestaurantCategory from './RestaurantCategory';
-import { useEffect, useState } from 'react';
 import useMobileMenu from '../utils/useMobileMenu';
 
 const RestaurantMenu = () => { 

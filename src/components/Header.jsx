@@ -13,7 +13,6 @@ const Header = () => {
         setnav(!nav)
     }
     const cartitems = useSelector((Store)=> Store.cart.items)
-    console.log(cartitems)
     return (
         <>
         <div className="flex justify-between bg-[#5d0c1d] items-center   ">

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import RestaurantCard from './RestaurantCard';
 import {Link} from 'react-router-dom'
 import Shimmer from './Shimmer';
-import { RiFilter2Fill } from "react-icons/ri";
 import useOnlineStatus from '../utils/useOnlineStatus'
 import { RESTAURANT_DATA } from '../utils/mockData';
 
@@ -54,7 +53,6 @@ const Body = () => {
     console.log(newlist)
     setfilteredrestaurants(newlist);
   }
-console.log('inbody')
   const checkStatus= useOnlineStatus();
   if(checkStatus === false) return <h1>rest is offline</h1>
   return listOfRestaurants.length === 0 ? <Shimmer/> :

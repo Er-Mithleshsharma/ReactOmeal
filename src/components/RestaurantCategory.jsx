@@ -7,7 +7,6 @@ const RestrauntCategory = ({data}) => {
   {
     setShowItems(!showItems);
   }
-    console.log(data)
   return (
           <div className="sm:w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 ">
         <div
