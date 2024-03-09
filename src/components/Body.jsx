@@ -85,19 +85,20 @@ console.log('inbody')
               console.log(inpval)
             }}>Search</button>
           </div> */}
-          <div className="flex justify-center">
+          <div className=" flex  gap-5 pl-20 items-center mt-1">
+            <h1 className='md:text-3xl font-semibold'>Filter Restaurants :</h1>
         <button
-          className="text-2xl font-bold p-2 "
+          className="font-xl font-semibold  bg-gray-100 rounded-3xl p-2 pt-1 mt-1 "
           onClick={() => {
             // * Filter logic
-            const filteredList = listOfRestaurants.filter((res)=> parseFloat(res.info.avgRating) > 4.2)
+            const filteredList = listOfRestaurants.filter((res)=> parseFloat(res.info.avgRating) > 4.0)
         
 
             setfilteredrestaurants(filteredList);
             console.log(filteredList);
           }}
         >  
-          Restraunts 
+          Ratings 4+
         </button>
       </div>
           {/* <div className="search">
