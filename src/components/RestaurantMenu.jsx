@@ -5,13 +5,32 @@ import { FiClock } from 'react-icons/fi';
 import { AiOutlineStar } from 'react-icons/ai';
 import useRestrauntMenu from '../utils/useRestrauntMenu';
 import RestaurantCategory from './RestaurantCategory';
+import { useEffect, useState } from 'react';
+import useMobileMenu from '../utils/useMobileMenu';
 
-const RestaurantMenu = () => {
-  const { resId } = useParams();
+const RestaurantMenu = () => { 
+   const { resId } = useParams();
     const resInfo = useRestrauntMenu(resId)
-    if(window.innerWidth <1024) return <div>swiggy api not available open in desktop</div>
-  if (resInfo === null) return <ShimmerMenu />;
+     const mobilemenu = useMobileMenu(resId)
+     let categories 
+     let show;
+  if (resInfo === null || mobilemenu == null) return <ShimmerMenu />;
+  if(window.innerWidth >=1024){
+    show =  resInfo?.cards[0]?.card?.card?.info;
+    
+    categories =resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
+    ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
 
+  }
+  else 
+  {
+  
+    show = mobilemenu?.cards[2]?.card?.card?.info
+    console.log(show) 
+    categories =mobilemenu?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
+    ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+    
+  }
   const {
     name,
     cuisines,
@@ -20,24 +39,21 @@ const RestaurantMenu = () => {
     cloudinaryImageId,
     avgRating,
     sla
-  } = resInfo?.cards[0]?.card?.card?.info;
+  } = show
 
-     const categories =resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
-     ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
- 
   return (
     <div>
-      <header className=" bg-black  flex justify-center pt-4 pr-6 gap-10">
+      <header className=" bg-black  flex justify-center pt-4 sm:pr-6 sm:gap-10">
         <div className="menu-header-left pr-6 pb-6">
-          <img src={CDN_URL + cloudinaryImageId} alt="Restaurent Info" className='h-44 w-64 rounded-lg ' />
+          <img src={CDN_URL + cloudinaryImageId} alt="Restaurent Info" className=' sm:h-44 h-28  sm:w-64 rounded-lg ' />
         </div>
-        <div className=" text-white flex flex-col pt-6">
+        <div className=" text-white flex flex-col sm:pt-6">
           <div className="">
-            <h1 className="text-4xl font-bold pb-4" >{name}</h1>
+            <h1 className=" text-xl sm:text-4xl font-bold pb-4" >{name}</h1>
             <h3 className='text-gray-400'>{cuisines.join(', ')}</h3>
           </div>
-          <div className="flex pt-4 w-64 justify-between">
-            <h4 className="flex">
+          <div className="flex pt-4 sm:w-64 justify-between flex-wrap md:flex-nowrap ">
+            <h4 className="flex pr-1">
               <span
                 className="icons"
                 style={{
@@ -51,7 +67,7 @@ const RestaurantMenu = () => {
               <span>{avgRating}</span>
             </h4>
             <div className='h-8 w-1 bg-white'></div>
-            <h4 className="flex">
+            <h4 className="flex pr-1">
               <span
                 className="icons"
                 style={{
