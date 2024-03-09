@@ -1,15 +1,15 @@
 import { useRouteError } from 'react-router-dom';
-
+import img from '../assets/error.jpg'
 const Error = () => {
   const err = useRouteError();
   console.log(err);
 
   return (
-    <div>
-      <h1>Oops❗</h1>
-      <h2>Something went wrong❗</h2>
+    <div className='flex justify-around items-center flex-wrap sm:flex-nowrap gap-20 mt-10'>
+      <h1 className='text-5xl font-bold'>Try Reloading</h1>
       <h3>
-        {err.status}: {err.statusText}
+        
+        <img className='sm:w-[800px] sm:h-[600px]' src={img} alt="" />
       </h3>
     </div>
   );

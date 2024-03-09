@@ -55,8 +55,8 @@ const Body = () => {
     setfilteredrestaurants(newlist);
   }
 console.log('inbody')
-  // const checkStatus= useOnlineStatus();
-  // if(checkStatus === false) return <h1>rest is offline</h1>
+  const checkStatus= useOnlineStatus();
+  if(checkStatus === false) return <h1>rest is offline</h1>
   return listOfRestaurants.length === 0 ? <Shimmer/> :
    (
     <div className="body">

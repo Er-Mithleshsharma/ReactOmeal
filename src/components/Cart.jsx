@@ -14,7 +14,7 @@ const Cart = () => {
   return (
     <div className="text-center m-4 p-4 min-h-screen">
       <h1 className="text-4xl font-bold">Cart</h1>
-      <div className="w-6/12 m-auto">
+      <div className="sm:w-6/12 m-auto">
         {cartItems.length === 0 && (
           <div className='flex flex-col  items-center'>
           <h2 className="text-3xl mt-6 pb-12 font-bold">

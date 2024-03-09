@@ -43,7 +43,7 @@ const ItemList = ({ items}) => {
             </div>
             <p className="text-xs">{item.card.info.description}</p>
           </div>
-          <div className="w-3/12 p-4 relative">
+          <div className="sm:w-3/12 p-4 relative">
             <div className="absolute bottom-4 left-14">
               <button className="p-2  rounded-lg bg-black text-white shadow-lg hover:bg-white  hover:text-black transition-all duration-[.3s] opacity-80 "
                 onClick={()=>buttonhandler(item)}>
@@ -53,7 +53,7 @@ const ItemList = ({ items}) => {
             <img
               src={CDN_URL + item.card.info.imageId}
               alt={item.card.info.name}
-              className="w-full rounded-md h-full "
+              className="w-full rounded-md sm:h-full  "
             />
           </div>
         </div>
