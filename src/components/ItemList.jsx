@@ -1,15 +1,31 @@
 import { useDispatch } from 'react-redux';
 import { CDN_URL } from '../utils/constants';
 import { addItem } from '../utils/cartSlice';
-
+import React from 'react';
+  import { ToastContainer, toast } from 'react-toastify';
+  import { Bounce } from 'react-toastify'; // Import Bounce transition
+  import 'react-toastify/dist/ReactToastify.css';
 const ItemList = ({ items}) => {
+  const notify = () => toast.success('Added to Cart!', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    transition: Bounce,
+    });
     const dispatch  = useDispatch()
  function buttonhandler(item)
  {
+  notify()
   dispatch(addItem(item));
  }
   return (
     <div>
+    
       {items.map((item) => (
         <div
           key={item.card.info.id}
@@ -42,6 +58,19 @@ const ItemList = ({ items}) => {
           </div>
         </div>
       ))}
+    <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+transition: Bounce
+/>
     </div>
   );
 };
