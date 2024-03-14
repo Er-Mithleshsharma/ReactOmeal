@@ -9,8 +9,10 @@ const useRestrauntMenu = (resId)=>{
       const fetchMenu = async () => {
         const data = await fetch(MENU_API + resId);
         const json = await data.json();
-        setResInfo(json.data);
-      };
+        setResInfo(json);
+     
+      };  
+       console.log(resInfo)
       return resInfo;
 }
 export default useRestrauntMenu

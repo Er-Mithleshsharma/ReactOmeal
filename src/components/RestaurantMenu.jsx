@@ -15,19 +15,26 @@ const RestaurantMenu = () => {
      let show;
   if (resInfo === null || mobilemenu == null) return <ShimmerMenu />;
   if(window.innerWidth >=1024){
-    show =  resInfo?.cards[0]?.card?.card?.info;
-    
-    categories =resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
+    show =  resInfo?.data?.data?.cards[0]?.card?.card?.info
+    console.log(show)
+    // menuPageData[0]?.card?.card?.info
+    categories =resInfo.data?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
     ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
 
   }
   else 
   {
   
-    show = mobilemenu?.cards[2]?.card?.card?.info
-    console.log(show) 
-    categories =mobilemenu?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
+    // show = mobilemenu?.cards[2]?.card?.card?.info
+    // console.log(show) 
+    // categories =mobilemenu?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
+    // ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+    show =  resInfo?.data?.data?.cards[0]?.card?.card?.info
+    console.log(show)
+    // menuPageData[0]?.card?.card?.info
+    categories =resInfo.data?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
     ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+
     
   }
   const {
