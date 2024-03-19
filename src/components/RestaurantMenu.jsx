@@ -10,7 +10,7 @@ import useMobileMenu from '../utils/useMobileMenu';
 const RestaurantMenu = () => { 
    const { resId } = useParams();
     const resInfo = useRestrauntMenu(resId)
-     const mobilemenu = useMobileMenu(resId)
+    //  const mobilemenu = useMobileMenu(resId)
      let categories 
      let show;
   if (resInfo === null || mobilemenu == null) return <ShimmerMenu />;
