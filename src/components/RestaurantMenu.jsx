@@ -10,33 +10,13 @@ import useMobileMenu from '../utils/useMobileMenu';
 const RestaurantMenu = () => { 
    const { resId } = useParams();
     const resInfo = useRestrauntMenu(resId)
-    //  const mobilemenu = useMobileMenu(resId)
-     let categories 
-     let show;
-  if (resInfo === null || mobilemenu == null) return <ShimmerMenu />;
-  if(window.innerWidth >=1024){
-    show =  resInfo?.data?.cards[0]?.card?.card?.info
+  if (resInfo === null) return <ShimmerMenu />;
+
+    const show =  resInfo?.data?.cards[0]?.card?.card?.info
     console.log(show)
-    // menuPageData[0]?.card?.card?.info
-    categories = resInfo.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
+    const categories = resInfo.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
     ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
 
-  }
-  else 
-  {
-  
-    // show = mobilemenu?.cards[2]?.card?.card?.info
-    // console.log(show) 
-    // categories =mobilemenu?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
-    // ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
-    show =  resInfo?.data?.cards[0]?.card?.card?.info
-    console.log(show)
-    // menuPageData[0]?.card?.card?.info
-    categories =resInfo.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
-    ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
-
-    
-  }
   const {
     name,
     cuisines,
