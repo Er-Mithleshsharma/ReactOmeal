@@ -12,9 +12,9 @@ const RestaurantMenu = () => {
     const resInfo = useRestrauntMenu(resId)
   if (resInfo === null) return <ShimmerMenu />;
 
-    const show =  resInfo?.data?.cards[0]?.card?.card?.info
+    const show =  resInfo?.data?.cards[2]?.card?.card?.info
     console.log(show)
-    const categories = resInfo.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
+    const categories = resInfo.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter
     ((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
 
   const {
