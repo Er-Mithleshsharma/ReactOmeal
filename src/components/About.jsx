@@ -1,6 +1,5 @@
 import {useState,useEffect} from 'react'
 import { FaGithub } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
 import { CgProfile } from "react-icons/cg";
 const About = ()=>{
     const [data,setdata] = useState({})

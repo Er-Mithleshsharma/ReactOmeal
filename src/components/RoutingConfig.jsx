@@ -1,9 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React, { Suspense , lazy } from 'react'
 import App from '../App.jsx'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-import Contact from './contact.jsx'
-import About from './About.jsx'
+const Contact = lazy(() => import('./Contact.jsx'));
+const About = lazy(() => import('./About'));
 import Body from './Body.jsx'
 import RestaurantMenu from './RestaurantMenu.jsx'
 import Error from './Error.jsx'
@@ -26,11 +25,19 @@ const appRouter = createBrowserRouter([
     {
   
       path :"/about",
-      element:<About/>
+      element:
+      <Suspense> 
+      <About/>
+      </Suspense>
+     
     },
     {
       path :"/contact",
-      element:<Contact/>
+      element:
+      <Suspense>
+         <Contact/>
+      </Suspense>
+     
     },
     {
       path: '/restaurants/:resId',
