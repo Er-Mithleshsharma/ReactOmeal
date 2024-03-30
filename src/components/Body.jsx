@@ -60,7 +60,7 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? <Shimmer/> :
    (
     <div className="body">
-      <div className='w-full flex flex-col justify-center items-center  bg-[url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png")] h-56'>
+      <div className='w-full flex flex-col justify-center items-center  bg-[url("https://res.cloudinary.com/dejxspajc/image/upload/v1711793374/body_gumxlg.avif")] h-56'>
         {/* <img className='w-full h-56 object-cover  blur-[1.8px]' src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" alt="" /> */}
         <div className='p-4 flex left-4 text-white font-bold'>
         <h1 className='text-xl sm:text-4xl'>Top Restaurant Chains Near You</h1>
