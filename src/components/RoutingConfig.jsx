@@ -1,7 +1,7 @@
 import React, { Suspense , lazy } from 'react'
 import App from '../App.jsx'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-const Contact = lazy(() => import('./Contact.jsx'));
+const Contact = lazy(() => import('./Contact'));
 const About = lazy(() => import('./About'));
 import Body from './Body.jsx'
 import RestaurantMenu from './RestaurantMenu.jsx'
